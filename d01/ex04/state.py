@@ -4,7 +4,7 @@ def capital_city(capital):
     states = {
         "Oregon"    :   "OR",
         "Alabama"   :   "AL",
-        "NewJersey" :   "NJ",
+        "New Jersey" :   "NJ",
         "Colorado"  :   "CO"
     }
 
@@ -25,5 +25,5 @@ def capital_city(capital):
         print("Unknown capital city")
 
 if __name__ == "__main__":
-    for arg in sys.argv[1:]:
-        capital_city(arg)
+    if len(sys.argv) == 2:
+        capital_city(sys.argv[1])

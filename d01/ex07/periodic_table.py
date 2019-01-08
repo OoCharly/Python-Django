@@ -4,7 +4,7 @@ def populate(table):
     td = "<td>\n" \
          "  <h4>{0}</h4>\n" \
          "  <ul style='list-style-type:none'>\n" \
-         "      <li>#{1}</li>\n" \
+         "      <li>{1}</li>\n" \
          "      <li class='symbol'>{2}</li>\n" \
          "      <li>{3}</li>\n" \
          "  </ul>\n" \
@@ -28,7 +28,7 @@ def populate(table):
     str_act = ""
 
     with open("mendeleiv.html", "a") as file:
-        for atom, data in table.items():
+        for atom, data in sorted(table.items(), key=lambda l: int(l[1]['number'])):
             cel = td.format(atom, data['number'], data['small'], data['molar'])
             number = int(data['number'])
             if number in colspan:

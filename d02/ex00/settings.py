@@ -1,0 +1,7 @@
+title = "Mon CV de rêve"
+head = "Cherche Job"
+firstname = "Charly"
+name = "Desvernay"
+age = "42"
+studies = "42"
+jobs = "Mangeur de carottes"

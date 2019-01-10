@@ -1,0 +1,12 @@
+Collecting git+https://github.com/jaraco/path.py.git
+  Cloning https://github.com/jaraco/path.py.git to /tmp/pip-req-build-xf0axe66
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+Collecting importlib_metadata>=0.5 (from path.py==11.5.1.dev20+g3684c4d)
+  Using cached https://files.pythonhosted.org/packages/c4/e4/b5dbc3364c296e0510e739c4e09daba535e9676ffde6c1312c2210c76bf0/importlib_metadata-0.8-py2.py3-none-any.whl
+Collecting zipp>=0.3.2 (from importlib_metadata>=0.5->path.py==11.5.1.dev20+g3684c4d)
+  Using cached https://files.pythonhosted.org/packages/00/42/10a1f8d29eaf9c7f2b555a5d1d602b9261f2a0cbec08f8f23d9056f5915d/zipp-0.3.3-py2.py3-none-any.whl
+Installing collected packages: zipp, importlib-metadata, path.py
+  Running setup.py install for path.py: started
+    Running setup.py install for path.py: finished with status 'done'
+Successfully installed importlib-metadata-0.8 path.py-11.5.1.dev20+g3684c4d zipp-0.3.3

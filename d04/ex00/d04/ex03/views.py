@@ -18,10 +18,6 @@ def ex03(request):
         colors.append(color)
         i += 1
 
-    black = "{0:0>6}".format(hex(black).replace('0x', ''))
-    blue = "{0:0>6}".format(hex(blue).replace('0x', ''))
-    green = "{0:0>6}".format(hex(green).replace('0x', ''))
-    red = "{0:0>6}".format(hex(red).replace('0x', ''))
-    return render(request, 'ex03/table.html', {'colors': colors, 'black': black, 'blue': blue, 'red': red, 'green': green})
+    return render(request, 'ex03/table.html', {'colors': colors, 'black': 'Noir', 'blue': 'Bleu', 'red': 'Rouge', 'green': 'Vert'})
 
 # Create your views here.

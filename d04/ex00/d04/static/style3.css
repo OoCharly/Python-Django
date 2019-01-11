@@ -2,3 +2,7 @@ td, th {
 height: 40px;
 width: 80px;
 }
+
+th {
+text-align: center
+}

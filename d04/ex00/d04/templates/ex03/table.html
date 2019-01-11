@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Ex03: Nuancier.{% endblock %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'style3.css' %}">
+{% endblock %}
+{% block content %}
+<table>
+    <thead>
+    <tr>
+        <th style="background-color: #{{ black }};">
+        </th>
+        <th style="background-color: #{{ red }};">
+        </th>
+        <th style="background-color: #{{ blue }};">
+        </th>
+        <th style="background-color: #{{ green }};">
+        </th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for color in colors %}
+    <tr>
+        <td style="background-color: #{{ color.black }}">
+        </td>
+        <td style="background-color: #{{ color.red }}">
+        </td>
+        <td style="background-color: #{{ color.blue }}">
+        </td>
+        <td style="background-color: #{{ color.green }}">
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

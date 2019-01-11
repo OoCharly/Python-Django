@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <title>{title}</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h2>{head}</h2>
+    <h4>{firstname} {name}</h4>
+    <hr>
+    <p>age: {age}<br>études: {studies}<br>expérience: {jobs}</p>
+</body>

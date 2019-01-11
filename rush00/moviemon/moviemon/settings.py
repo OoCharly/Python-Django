@@ -54,7 +54,7 @@ ROOT_URLCONF = 'moviemon.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -118,3 +118,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Settings for the gameboard
+
+MOVIEMON_SETTINGS = {
+    'SIZE' : (10, 10),
+    'MOVIES_ID' : [
+        'tt0111161', # The Shawshank Redemption
+        'tt0068646', # The Godfather
+    ]
+}

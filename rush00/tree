@@ -5,3 +5,18 @@ moviemon
 |battle
 |moviedex
 |options
+
+
+data : {
+    'position' : (x, y),
+    'freemoviemon': {
+        'tt000000',
+    },
+    'capturedmoviemon': {
+        'tt000000',
+    },
+    'balls' : 2,
+    ballsPosition:{
+    [ 2, x, y],
+    }
+}

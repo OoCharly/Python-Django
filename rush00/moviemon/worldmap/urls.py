@@ -1,7 +1,6 @@
 from django.urls import path
-
-from . import views
+from worldmap.views import WorldMap
 
 urlpatterns = [
-    path('', views.index),
+    path('', WorldMap.as_view()),
 ]

@@ -20,4 +20,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('titlescreen.urls')),
     path('worldmap/', include('worldmap.urls')),
+    path('battle/', include('battle.urls')),
+    path('options/', include('options.urls')),
+    path('moviedex/', include('moviedex.urls')),
 ]

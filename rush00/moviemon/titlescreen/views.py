@@ -4,5 +4,19 @@ from django.views import View
 
 
 class TitleScreen(View):
+
     def get (self, request):
-        return render(request, 'titlescreen/index.html')
+
+        controls = {
+        'up':'', 
+        'right':'',
+        'down':'',
+        'left':'',
+        'A':'/worldmap?new=""',
+        'B':'/options/load_game',
+        'start':'',
+        'select':'',
+        }
+        context = {}
+        context.update({'controls':controls})
+        return render(request, 'titlescreen/index.html', context)

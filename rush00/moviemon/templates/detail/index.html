@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/moviemon.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="game_screen">
+        <div class="screen">
+                <h3>{{ movie.Title }}</h3><br>
+
+                <img class ="poster" src="{{ movie.Poster }}"/>
+
+                <p>power    : {{ movie.imdbRating }}</p>
+                <p>Year     : {{ movie.Year }}</p>
+                <p>Director : {{ movie.Director }}</p>
+                <p>Actors   : {{ movie.Actors }}</p>
+                <p>Plot     : {{ movie.Plot }}</p>
+
+            <div class="info_cmds">
+                B - Go Back to Moviedex
+            </div>
+        </div>
+    </div>
+    {% include 'nav.html' %}
+{% endblock %}

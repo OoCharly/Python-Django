@@ -25,7 +25,7 @@ SECRET_KEY = '6hy^e3u+7n0q&)!mkgyhj*cm=1ic*_3i95_v_@kbiwk)w^5av9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -80,7 +80,6 @@ DATABASES = {
     }
 }
 
-
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators
 
@@ -118,13 +117,39 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+    ]
 
 # Settings for the gameboard
 
 MOVIEMON_SETTINGS = {
-    'SIZE' : (10, 10),
-    'MOVIES_ID' : [
+    'SIZE': (10, 10),
+    'MOVIES_ID': [
         'tt0111161', # The Shawshank Redemption
         'tt0068646', # The Godfather
-    ]
+        'tt0079788', # Zombies Haulocaust
+        'tt0804492', # Paris hilton truc
+        'tt0210235', # Pokemon
+        'tt0327554', # Catwoman
+        'tt1073498', # Spartatouille
+        'tt0362165', # Le fils de Mask
+        'tt0118688', # Batman et Robin
+        'tt1530509', # Human centriped 2
+        'tt0785077', # who is your cady
+    ],
+    'BALLS': 3
 }
+
+MOVIEMON_SETTINGS_DEBUG = {
+    'SIZE': (10, 10),
+    'MOVIES_ID': [
+        'tt0111161', # The Shawshank Redemption
+        'tt0068646', # The Godfather
+        'tt0079788', # Zombies Haulocaust
+        'tt0804492', # Paris hilton truc
+    ],
+    'BALLS': 3
+}
+
+MOVIEMON_SAVED_PATH=os.path.join(BASE_DIR, "saved_game")

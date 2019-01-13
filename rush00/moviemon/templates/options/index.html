@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/moviemon.css' %}">
+{% endblock %}
+{% block content %}
+<div class="screen">
+    <h3>Options</h3>
+    <h4>A - Save</h4>
+    <h4>B - Quit</h4>
+    <h4>start - Cancel</h4>
+</div>
+
+{% include 'nav.html' %}
+{% endblock %}

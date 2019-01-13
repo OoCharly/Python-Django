@@ -1,0 +1,76 @@
+<div class="controls">
+    <div class="cross">
+            <ul>
+                <li></li>
+                {% if controls.up|length > 0 %}
+                <a href="{{ controls.up }}"><li>Up</li></a>
+                {% else %}
+                <a><li>Up</li></a>
+                {% endif %}
+                <li></li>
+                {% if controls.left|length > 0 %}
+                <a href="{{ controls.left }}"><li>Left</li></a>
+                {% else %}
+                <a><li>Left</li></a>
+                {% endif %}
+                <li></li>
+                {% if controls.right|length > 0 %}
+                <a href="{{ controls.right }}"><li>Right</li></a>
+                {% else %}
+                <a><li>Right</li></a>
+                {% endif %}              
+                <li></li>
+                {% if controls.down|length > 0 %}
+                <a href="{{ controls.down }}"><li>Down</li></a>
+                {% else %}
+                <a><li>Down</li></a>
+                {% endif %}
+                <li></li>
+            </ul>
+    </div>
+    <div class="options">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            {% if controls.select|length > 0 %}
+            <a href="{{ controls.select }}"><li>select</li></a>
+            {% else %}
+            <a><li>select</li></a>
+            {% endif %}
+            <li></li>
+            {% if controls.start|length > 0 %}
+            <a href="{{ controls.start }}"><li>start</li></a>
+            {% else %}
+            <a><li>start</li></a>
+            {% endif %}
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+    <div class=actions>
+        <ul>
+            <li></li>
+            <li></li>
+            {% if controls.A|length > 0 %}
+            <a href="{{ controls.A }}"><li>A</li></a>
+            {% else %}
+            <a><li>A</li></a>
+            {% endif %}
+            
+            <li></li>
+            <li></li>
+            <li></li>
+            {% if controls.B|length > 0 %}
+            <a href="{{ controls.B }}"><li>B</li></a>
+            {% else %}
+            <a><li>B</li></a>
+            {% endif %}
+            <li></li>
+            <li></li>
+        
+        </ul>
+    </div>
+</div>

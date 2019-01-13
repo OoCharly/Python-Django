@@ -25,7 +25,8 @@ class MovieDex(View):
                         select = 1
 
         context.update({'select': select})
-    
+        context.update({'columns': str(int(len(context['capture_movies'] / 3)))})
+
     
         a = ''
         if (len(context['capture_movies']) > 0):

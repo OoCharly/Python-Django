@@ -6,7 +6,7 @@
 {% block content %}
     <div class="screen">
         <h2>Moviedex : {{ capture_movies|length }} Moviemons</h2>
-        <ul class="movie_li" >
+        <ul class="movie_li" style="columns: {{ columns }};">
             {% for movie in capture_movies %}
                 <li class=" {% if forloop.counter == select  %}doted{% endif %}">
                     {%for key, values in movies.items%}

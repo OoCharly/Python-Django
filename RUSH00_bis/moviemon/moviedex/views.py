@@ -23,7 +23,7 @@ class MovieDex(View):
                     else:
                         select = 1
 
-        context.update({'select': select})
+        context.update({'select': select, 'columns': str(int(len(context['capture_movies']) / 3))})
     
         movimon="test"
 

@@ -1,6 +1,7 @@
 import pickle
 import random
 from django.conf import settings
+from django.http import Http404
 #import settings
 import requests
 import os, glob, re
@@ -163,11 +164,14 @@ class Data():
             raise Exception("No more free movimons availables")
         return (Data._free_movies[nb_movies])
 
-    def get_strengh():
+    def get_strengh(self):
         return self._strengh
 
     def get_movie(self, movie):
-        return Data._movies[movie]
+        if movie in Data._movies:
+            return Data._movies[movie]
+        else:
+            raise Http404
     
     
     def move(self, dir='up'):

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/moviemon.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="screen">
+        <div class="home">
+            <h1>Welcome in the Moviemon World!</h1>
+            <h4>A - New Game</h4>
+            <h4>B - Load</h4>
+        </div>
+    </div>
+    {% include 'nav.html' %}
+{% endblock %}

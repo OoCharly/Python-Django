@@ -1,0 +1,33 @@
+moviemon
+|moviemon
+|titlescreen
+|worldmap
+|battle
+|moviedex
+|options
+
+
+data : {
+    'position' : (x, y),
+    'freemoviemon': {
+        'tt000000',
+    },
+    'capturedmoviemon': {
+        'tt000000',
+    },
+    'balls' : 2,
+    ballsPosition:{
+    [ 2, x, y],
+    }
+    moviedata : {
+        'tt000000' : {
+            "Title": "The Shawshank Redemption",
+            "Year": "1994",
+            "Director": "Frank Darabont",
+            "Actors": "Tim Robbins, Morgan Freeman, Bob Gunton, William Sadler",
+            "Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg",
+            "imdbRating": "9.3",
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/moviemon.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="screen">
+
+        <h3>Un <i>{{ movie.Title }}</i> sauvage apparaît !</h3><br>
+
+        <img class ="poster" src="{{ movie.Poster }}"/>
+        <div class="info_cmds"> 
+            <p>Your strengh : {{ capture_movies|length }}</p>
+            <p>vs</p>
+            <p>moviemon : {{movie.imdbRating}} </p>
+            <p>{{proba}}% of chance to succed !! </p>
+        
+
+
+            <div>
+                    <p>Launch a ball with <span>A</span> [ {{ balls }} balls]</p>
+                    <p>Leave Battle <span>B</span></p>
+            </div>
+            {% if event %}
+                <div class="event"><p>{{event}}</p></div>
+            {% endif %} 
+        </div>
+    </div>
+    {% include 'nav.html' %}
+{% endblock %}

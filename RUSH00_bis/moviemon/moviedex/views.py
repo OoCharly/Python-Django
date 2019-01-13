@@ -3,6 +3,7 @@ from django.views import View
 from moviemon.data import Data
 
 
+
 class MovieDex(View):
     data = Data()
 
@@ -23,10 +24,9 @@ class MovieDex(View):
                     else:
                         select = 1
 
-        context.update({'select': select, 'columns': str(int(len(context['capture_movies']) / 3))})
+        context.update({'select': select})
     
-        movimon="test"
-
+    
         a = ''
         if (len(context['capture_movies']) > 0):
             a = context['capture_movies'][context['select'] - 1]

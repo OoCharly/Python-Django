@@ -23,17 +23,15 @@ class WorldMap(View):
             'select':'/moviedex',
         }
 
-        if random.randrange(101) > 80 and req.get('c', 'False') == 'False':
+        if random.randrange(101) > 80:
             event.update({'moviemon': self.data.get_random_movie()})
             controls['A'] = '/battle/' + event['moviemon']
-        if 'moviemon' not in event and req.get('c', False) == 'False':
-            balls = random.randrange(1,3)
-            self.data.increase_balls(balls)
-            event.update({'balls': str(balls)})
 
         if 'move' in req:
-            c = self.data.move(req['move'])
-            return redirect('/worldmap?c=' + str(c)) #pour eviter le move lors de refresh TODO
+            if 'moviemon' not in event:
+                self.data.increase_balls(random.randrange(1,3))
+            self.data.move(req['move'])
+            return redirect('/worldmap') #pour eviter le move lors de refresh TODO
         if 'new' in req:
             self.data.clean_data_for_new_game()
             return redirect('/worldmap') #pour eviter le move lors de refresh TODO

@@ -23,7 +23,7 @@ class Battle(View):
             'down':'',
             'left':'',
             'A':'?move=throw',
-            'B':'/worldmap?c=True',
+            'B':'/worldmap',
             'start':'',
             'select':'',
         }

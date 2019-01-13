@@ -5,9 +5,10 @@
 Erreur 404
 {% endblock title%}
 	
-
 {% block content %}
 <h1>ERREUR 404</h1>
-{{error}}
-<p>Page non trouvée. <a href="{% url 'accueil" %}">Accueil</a></p>
+
+{{ error }}
+
+<p>Page non trouvée. <a href="#">Accueil</a></p>
 {% endblock content %}

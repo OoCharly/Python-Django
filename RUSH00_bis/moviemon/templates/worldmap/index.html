@@ -11,20 +11,13 @@
             <p>x: {{ size.0 }} y: {{ size.1 }}</p>
             <p>Balls: {{ balls }}</p>
             {% if event %}
-            {% if event.moviemon %}
-            <p class="movipop event">A wild <br>[
+            <p class="movipop event">{{ event.moviemon }} <br>[
                 {% for movie, infos in movies.items %}    
                     {% if movie == event.moviemon %}
                         {{infos.Title}}
                     {% endif %}
                 {% endfor %}]<br>just appeared !! </p>
             <p>Press <span>A</span> : try to catch it.</p>
-            {% endif %}
-            {% if event.balls %}
-            <p class="movipop event">You found <br>
-                {{ event.balls }}<br>
-                balls !</p>
-            {% endif %}
             {% endif %}
             <p>Press (select) to go to Moviedex.</p>
             <p>Press (start) : for options.</p>
@@ -33,7 +26,7 @@
             {% for x in size.0 %}
             <tr>
                 {% for y in size.1 %}
-                    <td{% if pos_y == y and pos_x == x %} class="player {% if event.moviemon %}monster{% else %}grass{% endif %}"> <div class="guy"></div> {% else %} class="grass" >{% endif %}</td>
+                    <td{% if pos_y == y and pos_x == x %} class="player {% if event %}monster{% else %}grass{% endif %}"> <div class="guy"></div> {% else %} class="grass" >{% endif %}</td>
             {% endfor %}
             </tr>
             {% endfor %}

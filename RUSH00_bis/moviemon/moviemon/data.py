@@ -172,30 +172,42 @@ class Data():
     
     def move(self, dir='up'):
         if (dir == 'up'):
-            Data.move_up()
+            return Data.move_up()
         elif (dir == 'down'):
-            Data.move_down()
+            return Data.move_down()
         elif (dir == 'left'):
-            Data.move_left()
+            return Data.move_left()
         elif (dir == 'right'):
-            Data.move_right()
+            return Data.move_right()
 
     def move_up():
         if (Data._x > 0):
             Data._x -= 1
+            return 'False'
+        else:
+            return 'True'
     
     def move_down():
         if (Data._x < settings.MOVIEMON_SETTINGS['SIZE'][0] - 1):
             Data._x += 1
-    
+            return 'False'
+        else:
+            return 'True'
+
     def move_left():
         if (Data._y != 0):
             Data._y -= 1
+            return 'False'
+        else:
+            return 'True'
 
     def move_right():
         if (Data._y < settings.MOVIEMON_SETTINGS['SIZE'][1] - 1):
             Data._y += 1
-    
+            return 'False'
+        else:
+            return 'True'
+
 
     def decrease_balls(self):
         Data._balls -= 1

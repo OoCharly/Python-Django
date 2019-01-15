@@ -1,0 +1,266 @@
+
+
+html{
+    background:lightblue;
+    width:100%;
+    height:95%;
+}
+
+body{
+    margin:0px;
+    width:100%;   
+    height:95%;
+
+}
+
+.screen{
+    border:1px solid black;
+    width:60%;
+    height:50%;
+    margin : auto;
+    background:rgba(0,0,0,10%);
+}
+
+
+.game{
+    height:95%;
+    width:90%;
+    margin:auto;
+    margin-top:5%;
+    border: 10px solid black;
+    background :lightcyan;
+}
+
+
+/* to put les posters sur la meme ligne, mais fait péter les commandes...
+
+.movie_li li {
+    display:inherit;
+    display:inline;
+}
+*/
+.game_data, .info_cmds{
+    position: fixed;
+    right:16%;
+    top:12%;
+    width:15%;
+    height:30%;
+    margin:auto;
+    background:rgba(0,0,0,5%);
+    box-shadow: -5px 5px 2px 1px rgba(0, 0, 255, .2);
+
+}
+
+.info_cmds{
+    width:10%;
+    right:30%;
+}
+
+
+.game_data span, p span{
+    border: 1px solid grey;
+    border-radius:50%;
+    padding:0.5%;
+    box-shadow: 2px 2px 5px 1px darkgrey;
+}
+
+.movipop{
+    background:red;
+    width:100%;
+    margin:auto;
+}
+
+.game_srceen{
+    display:inherit;
+    background: rgba(0,0,0,5%);
+    border:1px solid black;
+
+    border: 5px solid yellow;
+    width:80%;
+    height:90%;
+    margin:auto;
+
+}
+
+
+
+.board{
+    height: 80%;
+    border:5px solid black;
+}
+
+.board table{
+    margin:auto;
+    border:2px solid green;
+    background:greenyellow;
+    border-collapse: collapse;
+}
+
+
+.player{
+    background-color:lightseagreen;
+}
+
+
+td{
+    border: 1px solid mediumaquamarine;
+    width: 75px;
+}
+
+.grass {
+
+    background : url(https://www.racedepartment.com/data/attachments/29/29458-08e36c82a6886a2df6e740f57c7f4b6e.jpg) no-repeat center center;
+    background-size:100% 100%;
+
+}
+
+
+
+.event{
+    display: inherit;
+    background:red;
+    color:white;
+    font-weight: bold;
+    border:1px solid white;
+    box-shadow: 2px 2px 2px 2px black;
+    width:60%;
+    margin:auto;
+    text-align : center;
+}
+
+@-webkit-keyframes danger {
+    0%   { background-color:red }
+    50% { background-color:white }
+  }
+  @-moz-keyframes danger {
+    0%   { background-color:red }
+    50% { background-color:white }
+  }
+  @keyframes danger {
+    0%   { background-color:red }
+    50% { background-color:white }
+  }
+
+.monster {
+  -webkit-animation: danger 2s infinite;
+  -moz-animation:    danger 2s infinite;
+  animation:         danger 2s infinite;
+}
+
+.guy{
+    width:40px;
+    height:50px;
+    margin:auto;
+    background:  url(https://una.im/slides-bdconf/img/dancing-banana.gif) no-repeat center center;
+    background-size:100% 100%;
+
+}
+
+tr {
+    height: 75px;
+}
+
+.poster {
+    height: 420px;
+    margin-left:10%;
+}
+
+.doted {
+    list-style-type: none;
+    color:darkblue;
+    font-weight:bold;
+}
+
+.poster_mini{
+    height:150px;
+}
+
+.doted .poster_mini{
+    border: 3px solid black;
+    box-shadow : 3px 3px 30px 3px darkblue;
+    z-index:100;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+
+
+/* Controls */
+
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 50%;
+    height:20%;
+    grid-gap: 2em;
+    margin: 1% auto;
+    border:5px solid purple;
+    background:Plum;
+    vertical-align: middle;
+  }
+  
+
+.controls a{
+    text-decoration: none;
+    background:lightgray;
+    text-align:center;
+    box-shadow: 1px 1px 2px 1px black;
+    padding-top:25%;
+
+    color:darkslategrey;
+
+
+}
+
+.controls a:hover { 
+    background-color: grey;
+    box-shadow: 2px 2px 5px 1px black;
+}
+
+.actions a{
+    background:purple;
+    color:white;
+    border-radius:50%;
+    width:60%;
+    height:50%;
+    padding-top:20%;
+    margin:auto;
+}
+
+.options a{
+    width:100%;
+    height:40%;
+    padding-top:5%;
+
+    margin-top:20%;
+    margin:auto;
+    border-radius:30% 30% 30% 30%; 
+}
+
+  
+
+.controls ul {
+    display:inherit;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    grid-gap: 2%;
+    height: 90%;
+    box-sizing: border-box;
+    border-radius:5%;
+
+}
+  
+  
+.controls li {
+    box-sizing: border-box;
+}
+
+
+

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Remove movies</title>
+</head>
+<body>
+<form method="POST" action="">
+    {% csrf_token %}
+    <select name="title">
+        {% for item in films %}
+        <option name="title" value="{{ item.0 }}">{{ item.1 }}</option>
+        {% endfor %}
+    </select>
+    <input type="text" name="crawl_text">
+    <input type='submit' value='Submit'>
+</form>
+</body>
+</html>
